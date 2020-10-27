@@ -1,0 +1,36 @@
+<!--Exercise to tell heating system what to do based on actual and desired temp var
+    Added extra JS features and inspired CSS properties from my Nest thermostat at home
+
+    In order access the 'extended challenge', comment out bottom portion of JS script sheet and add variables-->
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions Exercise 1</title>
+</head>
+
+<body>
+
+    <div class = "thermostat">
+        <div class= "thermostatInfo">
+
+            <!--Two variables to determing what curren temp is and what desired temp should be-->
+            <p>Current Temperature</p>
+            <input type="number" id="actualTemp" name="actualTemp" placeholder = "70"><br>
+            <p>Desired Temperature</p>
+            <input type="number" id="desiredTemp" name="desiredTemp" placeholder = "65"><br>
+
+            <!--Sends temperatures variables to JS sheet-->
+            <button onclick = "updateTemps()" id="button">Adjust Thermostat</button><br>
+
+            <!--Outputs new saying based on what is occurring temperature wise (house is heating/house is cooling/thermostat on standby-->
+            <span id="newValue"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
